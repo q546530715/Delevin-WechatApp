@@ -1,0 +1,71 @@
+<import src="/template/information/loads.wxml" />
+<template is="loads" data="{{hidden:hid}}"/>
+<!--<import src="/template/information/index/figure.wxml"/>
+<template is="figure" data="{{display:dis}}"/>-->
+
+<!--<view class="menu">
+    <scroll-view class="scroll-view_H" scroll-x="true" >
+        <view id="{{menu_id}}" bindtap="click_menu" wx:for="{{menu}}" wx:for-index="menu_id" wx:for-item="item" class="nav_font">
+            <block wx:if="{{menu_id == menuStatic}}"><text class="nav_hover">{{item}}</text></block>
+            <block wx:else>{{item}}</block>
+        </view> 
+    </scroll-view>
+    <view class="add_menu">
+        <image src="/images/swdw.png"></image>
+    </view>
+</view>-->
+
+<view class="swiper">
+    <progress percent="100" stroke-width="2" active color="#3080c0"/>
+    <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+        <block wx:for="{{course_list}}">
+            <swiper-item>
+                <image src="{{item.course_img}}" class="slide-image" height="150"/>
+            </swiper-item>
+        </block>
+    </swiper>
+</view>
+
+<scroll-view class="hot-box" scroll-y="true"  lower-threshold="100" bindscrolltolower="scrolltolower">
+
+    <view wx:for="{{news_list}}" wx:for-item="item">
+
+        <view wx:if="{{item.id % 5 == 0}}" class="news_content" id="{{item.id}}" catchtap="detail" wx:key="news_item_{{item.id}}">
+            <view class="news_content_right news_content-left">
+                <image src="{{myake_url}}{{item.img_b ? item.img_b : default_img }}" ></image>
+            </view>
+            <view class="news_content_left news_content-right">
+            <view class="news_content_left_top">
+                <view class="text_top">{{item.title}}</view>
+            </view>
+            <view class="news_content_left_but">
+                <image src="/images/pic.jpg" class="pic" ></image>
+                <text>{{item.address}}</text>
+                <text style="margin-left:10px;">{{item.real_read_num}}条评论</text>
+                <text style="margin-left:10px;">{{item.create_time}}</text>
+            </view>
+            </view>
+        </view>
+
+
+        <view class="news_content" wx:else id="{{item.id}}" wx:key="news_item_{{item.id}}" catchtap="detail" >
+            <view class="news_content_left">
+            <view class="news_content_left_top">
+                <view class="text_top">{{item.title}}</view>
+            </view>
+            <view class="news_content_left_but">
+                <image src="/images/pic.jpg" class="pic"></image>
+                <text>{{item.address}}</text>
+                <text style="margin-left:10px;">{{item.real_read_num}}条评论</text>
+                <text style="margin-left:10px;">{{item.create_time}}</text>
+            </view>
+            </view>
+            <view class="news_content_right">
+               
+                <image src="{{myake_url}}{{item.img_b ? item.img_b : default_img }}" ></image>
+            </view>
+        </view>
+
+    </view>
+</scroll-view>
+    

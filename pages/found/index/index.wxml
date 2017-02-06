@@ -1,0 +1,20 @@
+<view class="navigator">
+    <navigator class="nav nav_top" url="navigate?title=navigate"  hover-class="navigator-hover">
+        <!--<image class="nav_img" src="/images/cateringzone@2x.png"></image>-->
+        <text>主页</text>
+    </navigator>
+    <navigator class="nav nav_top" url="redirect?title=redirect"  hover-class="other-navigator-hover">
+        <!--<image class="nav_img" src="/images/nearPerson@2x.png"></image>-->
+        <text>PHP</text>
+    </navigator>
+    <navigator class="nav nav_border" url="redirect?title=redirect"  hover-class="other-navigator-hover">
+        <!--<image class="nav_img" src="/images/extension@2x.png"></image>-->
+        <text>Mysql</text>
+    </navigator>
+    <navigator class="nav nav_top" url="redirect?title=redirect"  hover-class="other-navigator-hover">
+        <!--<image class="nav_img" src="/images/hang_jia@2x.png"></image>-->
+        <text>Linux</text>
+    </navigator>
+</view>
+
+

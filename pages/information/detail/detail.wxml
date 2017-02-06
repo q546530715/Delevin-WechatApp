@@ -1,0 +1,22 @@
+<view id="main">
+    <view class="title">
+       {{news_info.title}}
+    </view>
+    <view class="numbers">
+       <text>{{news_info.create_time}}</text>
+       <text>阅读量{{news_info.real_read_num}}</text>
+    </view>
+    <view class="content">
+        
+          {{news_info.des}}
+    </view>
+    <view class="comments_list">
+        
+    </view>
+</view>
+<view id="comments">
+    <view class="input">
+          <input class="text" type="text" placeholder="写点什么吧"/>
+          <button type="default" class="submit">发表评论</button>
+    </view>
+</view>
